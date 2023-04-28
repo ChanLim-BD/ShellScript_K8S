@@ -47,4 +47,47 @@
 
 ## 1. Docker 설치
 
+```shell
+> chmod +x docker_install.sh
+> /docker_install.sh
+```
+
 ## 2. ContainerD 설치
+
+```shell
+> chmod +x docker_install.sh
+> /docker_install.sh
+
+> sudo nano /etc/containerd/config.toml
+
+>>
+[plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc]
+  ...
+  [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc.options]
+    SystemdCgroup = true
+
+수정하기.
+
+이후 sudo systemctl restart containerd
+```
+
+---
+
+# K8S 설치
+
+```shell
+> chmod +x install_kubernetes.sh
+> /install_kubernetes.sh
+```
+
+## 추가로 원하는 CNI를 설치해야한다.
+
+### Flannel 설치
+
+```shell
+kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+```
+
+![](https://velog.velcdn.com/images/chan9708/post/9fdbe3f6-1136-4744-8925-21a3a4d174f7/image.png)
+
+![](https://velog.velcdn.com/images/chan9708/post/4b6c461d-5d34-42c8-9ae0-3db6abcc7c35/image.png)
