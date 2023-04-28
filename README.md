@@ -1,3 +1,7 @@
+![](https://velog.velcdn.com/images/chan9708/post/51a5f5b0-fff3-48a0-8563-b6e5c32fdb05/image.jpg)
+
+---
+
 # 사전 점검
 
 ```shell
@@ -36,6 +40,8 @@
 > chmod +x SELinux.sh
 > /SELinux.sh
 ```
+
+---
 
 # Container Runtime 설치
 
